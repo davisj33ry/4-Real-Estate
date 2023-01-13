@@ -1,51 +1,41 @@
 [
   {
-    "listingId": "123456",
     "address": "25 Main St, New York, NY 10018",
     "price": 750000
   },
   {
-    "listingId": "654321",
     "address": "370 Spring St, Westport, PA 17778",
     "price": 125000
   },
   {
-    "listingId": "123876",
     "address": "225 Llano, Pasadena, TX 77504",
     "price": 102000
   },
   {
-    "listingId": "135790",
     "address": "32 Aquarena Springs Dr, San Marcos, TX 78666",
     "price": 75000
   },
   {
-    "listingId": "975310",
     "address": "24 Spring St, Ithaca, NY 14850",
     "price": 160000
   },
   {
-    "listingId": "1428364",
     "address": "456 Hamilton Rd, Albany, NY 12204",
     "price": 265000
   },
   {
-    "listingId": "134256",
     "address": "22 Soundview Ave, White Plains, NY 10601",
     "price": 750000
   },
   {
-    "listingId": "943291",
     "address": "37 Ballston St, Bloomingdale, NJ 07403",
     "price": 350000
   },
   {
-    "listingId": "242526",
     "address": "9 Rose St, Somerville, MA 02143",
     "price": 340000
   },
   {
-    "listingId": "734592",
     "address": "3300 Dolphin Cove, Austin, TX, 78704",
     "price": 106000
   }
