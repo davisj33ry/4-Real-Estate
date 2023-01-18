@@ -1,4 +1,4 @@
-const { User } = require('../../models');
+const { User } = require('../models');
 // CREATE new user
 const newUser = async (req, res) => {
     try {
@@ -68,4 +68,4 @@ const userLogout = async (req, res) => {
   }
 };
 
-module.exports = router;
+// module.exports = router;
