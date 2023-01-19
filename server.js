@@ -4,7 +4,14 @@ const express = require('express');
 const session = require('express-session');
 
 
+
 // const helpers = require('../utils/helpers');
+
+const exphbs = require('express-handlebars');
+const controllers = require('./controllers/user');
+const routes = require('./routes/user');
+const helpers = require('./utils/helpers');
+
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -54,9 +61,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// app.use('/', routes);
-// app.use('/login', routes);
-// app.unsubscribe('/logout, routes');
+
+app.use(routes);
+app.use(controllers);
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on port ' + PORT))

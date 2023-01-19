@@ -1,4 +1,6 @@
+
 const { User } = require("../models/User");
+
 // CREATE new user
 
   exports.createNewUser = async (req, res) =>{
@@ -68,3 +70,6 @@ const { User } = require("../models/User");
       res.status(404).end();
     }
   }
+
+// module.exports = router;
+
