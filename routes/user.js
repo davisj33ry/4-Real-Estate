@@ -4,11 +4,11 @@ const router = express.Router();
 const userController = require('../controllers/user');
 
 
-router.post('/', userController.createNewUser);
+router.post('/login', userController.createNewUser);
 // router.delete('/', userController.newUser)
 
-// router.post('/login', UserService.userLogin)
+router.post('/login', userController.userLogin)
 
-// router.post('/logout', UserService.userLogout)
+router.post('/logout', userController.userLogout)
 
 module.exports = router;
