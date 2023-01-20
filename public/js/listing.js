@@ -8,7 +8,7 @@ const newHouseHandler = async (event) => {
     const price = document.querySelector('#price').value.trim();
   
     if (address && city && state && zipCode && price) {
-      const response = await fetch(`/api/house`, {
+      const response = await fetch(`/listing/new`, {
         method: 'POST',
         body: JSON.stringify({ address, city, state, zipCode, price}),
         headers: {
@@ -17,7 +17,7 @@ const newHouseHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/home');
       } else {
         alert('Failed to create project');
       }

@@ -4,4 +4,4 @@ const houseListing = require('../controllers/houseListing');
 // get all house listings
 router.get('/listing/all', houseListing.allListings);
 // post new house listing
-router.post('/listing/new', houseListing.newListing);)
+router.post('/listing/new', houseListing.newListing);
