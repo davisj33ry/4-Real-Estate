@@ -1,18 +1,17 @@
-{{#each projects as |project|}}
-      <div class="container">
-        <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-4">
-           <div class="card">
-                <img src="./Assets/Hosue Placeholder.png" alt="house place holder" class="card-img-top">
-                {{!-- <img src="{{project.img_url}}" alt="house place holder" class="card-img-top"> --}}
-                <div class="card-body">
-                    <p>Beautiful Property for Sale</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{project.address}}</li>
-                        <li class="list-group-item">{{project.listing_id}}</li>
-                        <li class="list-group-item">{{project.price}}</li >
-                      </ul>
-                </div>
-            </div>
-            </div>
-{{/each}}
+<div class="row">
+  {{#each projects as |project|}}
+  <div class="col-md-4">
+    <div class="card">
+      <img src="./Assets/House Placeholder.png" alt="house place holder" class="card-img-top">
+      <div class="card-body">
+        <p>Beautiful Property for Sale</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Property Address: {{project.dataValues.address}}</li>
+          <li class="list-group-item">Listing ID: {{project.dataValues.listing_id}}</li>
+          <li class="list-group-item">Property Price: {{project.dataValues.price}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
