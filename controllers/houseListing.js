@@ -1,6 +1,7 @@
+const router = require('express').Router();
 const { Project } = require('../models');
 // CREATE new listing
-exports.newListing = async (req, res) => {
+router.post('/listing/new', async (req, res) => {
     try {
         const newListing = await Project.create({
             address: req.body.address,
@@ -14,9 +15,9 @@ exports.newListing = async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     }
-}; 
+}); 
 
-exports.getAllListins = async (req, res) => {
+router.get('/listing/all', async (req, res) => {
     try {
         const allListings = await Project.findAll();
         res.status(200).json(allListings);
@@ -24,4 +25,4 @@ exports.getAllListins = async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     };
-};
+});

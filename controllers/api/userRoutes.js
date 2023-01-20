@@ -1,9 +1,9 @@
-
-const { User } = require("../models/User");
+const router = require('express').Router();
+const { User } = require("../../models/User");
 
 // CREATE new user
 
-  exports.createNewUser = async (req, res) =>{
+  router.post('/', async (req, res) =>{
     try {
       const newUser = await User.create({
         name: req.body.name,
@@ -20,10 +20,10 @@ const { User } = require("../models/User");
       console.log(err);
       res.status(500).json(err);
     }
-  }
+  }),
 
   // login
-  exports.userLogin = async (req, res) => {
+  router.post('/login', async (req, res) => {
     try {
       const userLogin = await User.findOne({
         where: {
@@ -58,10 +58,10 @@ const { User } = require("../models/User");
       console.log(err);
       res.status(500).json(err);
     }
-  }
+  });
 
   // Logout
-  exports.userLogout = async (req, res) => {
+  router.post('/logout', async (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
         res.status(204).end();
@@ -69,7 +69,7 @@ const { User } = require("../models/User");
     } else {
       res.status(404).end();
     }
-  }
+  });
 
-// module.exports = router;
+module.exports = router;
 

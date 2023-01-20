@@ -1,12 +1,11 @@
-const appjs = require('./app');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 
 
 const exphbs = require('express-handlebars');
-const controllers = require('./controllers/user');
-const routes = require('./routes/user');
+const controllers = require('./controllers');
+const routes = require('./controllers');
 
 
 const sequelize = require('./config/connection');
