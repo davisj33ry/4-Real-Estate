@@ -1,9 +1,13 @@
 const { Project } = require('../models');
 // CREATE new listing
-const newListing = async (req, res) => {
+exports.newListing = async (req, res) => {
     try {
-        await Project.create({
+        const newListing = await Project.create({
             address: req.body.address,
+            price: req.body.price,
+            city: req.body.city,
+            state: req.body.state,
+            zipcode: req.body.zipcode,
             price: req.body.price,
         });
     } catch (err) {
@@ -12,14 +16,12 @@ const newListing = async (req, res) => {
     }
 }; 
 
-// retreive house listing
-const getHouseListings = async (req, res) => {
+exports.getAllListins = async (req, res) => {
     try {
-        const houseListings = await Project.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['username'],
-                },
-            ],
-        });
+        const allListings = await Project.findAll();
+        res.status(200).json(allListings);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    };
+};
