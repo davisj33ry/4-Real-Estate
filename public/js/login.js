@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/listing/new');
+        document.location.replace('listing/new');
       } else {
         alert(response.statusText);
       }
@@ -39,7 +39,7 @@ const loginFormHandler = async (event) => {
       });
   console.log(response)
       if (response.ok) {
-        // document.location.replace('/listing/new');
+        document.location.replace('/api/listing/new');
         await fetch('/api/listing/new', {
           method:'GET',
           headers: { 'Content-Type': 'application/json' },
