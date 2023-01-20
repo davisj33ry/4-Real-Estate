@@ -6,7 +6,7 @@ exports.newListing = async (req, res) => {
             address: req.body.address,
             price: req.body.price,
             city: req.body.city,
-            state: req.body.state
+            state: req.body.state,
             zipcode: req.body.zipcode,
             price: req.body.price,
         });
