@@ -1,41 +1,27 @@
-const router = require('express').Router();
-const { Project } = require('../models');
+const router = require("express").Router();
+const { Project } = require("../models");
 
 // GET all listings for homepage
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const dbHomeListings = await Project.findAll({
-      // include: [
-      //   {
-      //      address: req.body.address,
-      //       price: req.body.price,
-      //       city: req.body.city,
-      //       state: req.body.state,
-      //       zipcode: req.body.zipcode,
-            
-      //   },
-      // ],
+    const projects = await Project.findAll({
+      attributes: ['price', 'address', 'listing_id']
     });
-
-    const galleryList = dbHomeListings.map((galleryList) =>
-      galleryList.get({ plain: true })
-    );
-
-    res.render('homepage', galleryList);
+    console.log(projects);
+    res.render("homepage", { projects });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
