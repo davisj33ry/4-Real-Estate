@@ -2,8 +2,9 @@ const router = require('express').Router();
 const { Project} = require('../models');
 
 // GET all listings for homepage
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
+
     // Get all projects and JOIN with user data
     const projectData = await Project.findAll();
 
@@ -15,10 +16,12 @@ router.get('/', async (req, res) => {
       projects, 
       logged_in: req.session.logged_in 
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/listing/new', (req, res) => {
   
@@ -32,10 +35,11 @@ router.get('/listing/new', (req, res) => {
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/listing/new');
+
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;

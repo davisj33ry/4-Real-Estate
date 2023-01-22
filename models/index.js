@@ -1,6 +1,8 @@
 const User = require('./User');
 const Project = require('./Project');
 
+app.use("/Assets", express.static(path.join(__dirname, "/public/Assets")));
+
 User.hasMany(Project, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -11,3 +13,5 @@ Project.belongsTo(User, {
 });
 
 module.exports = { User, Project };
+
+

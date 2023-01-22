@@ -14,6 +14,7 @@ router.post('/new',  async (req, res) => {
         });
         
       res.status(200).json(newListing);
+
     } catch (err) {
       res.status(400).json(err);
     }

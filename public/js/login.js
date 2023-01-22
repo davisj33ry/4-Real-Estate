@@ -20,7 +20,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
 
         document.location.replace('/listing/new');
-       
+
       } else {
         alert(response.statusText);
       }
@@ -46,7 +46,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
 
         document.location.replace('/listing/new');
-       
+ 
       } else {
         alert(response.statusText);
       }
