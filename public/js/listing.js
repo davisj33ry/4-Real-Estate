@@ -8,7 +8,7 @@ const newHouseHandler = async (event) => {
     const price = document.querySelector('#price').value.trim();
   
     if (address && city && state && zipCode && price) {
-      const response = await fetch(`/listing/new`, {
+      const response = await fetch(`/api/listing/new`, {
         method: 'POST',
         body: JSON.stringify({ address, city, state, zipCode, price}),
         headers: {
@@ -27,4 +27,4 @@ const newHouseHandler = async (event) => {
    
   document
     .querySelector('.new-house-submit')
-    .addEventListener('submit', newHouseHandler);
+    .addEventListener('click', newHouseHandler);

@@ -19,6 +19,16 @@ Project.init(
     address: {
       type: DataTypes.STRING,
     },
+    city: {
+      type: DataTypes.STRING,
+    },
+    state: {
+      type: DataTypes.STRING,
+    },
+    zipCode: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
     price: {
       type: DataTypes.FLOAT,
       allowNull: false,

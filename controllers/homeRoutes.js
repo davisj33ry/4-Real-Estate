@@ -1,37 +1,37 @@
 const router = require('express').Router();
-const { Project } = require('../models');
+const { Project} = require('../models');
 
 // GET all listings for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbHomeListings = await Project.findAll({
-      // include: [
-      //   {
-      //      address: req.body.address,
-      //       price: req.body.price,
-      //       city: req.body.city,
-      //       state: req.body.state,
-      //       zipcode: req.body.zipcode,
-            
-      //   },
-      // ],
+    // Get all projects and JOIN with user data
+    const projectData = await Project.findAll();
+
+    // Serialize data so the template can read it
+    const projects = projectData.map((project) => project.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      projects, 
+      logged_in: req.session.logged_in 
     });
-
-    const galleryList = dbHomeListings.map((galleryList) =>
-      galleryList.get({ plain: true })
-    );
-
-    res.render('homepage', galleryList);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
+router.get('/listing/new', (req, res) => {
+  
+  if (req.session.logged_in) {
+    res.render('submit', { logged_in: req.session.logged_in});
+    return;
+  }
+
+});
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
+  if (req.session.logged_in) {
+    res.redirect('/listing/new');
     return;
   }
 

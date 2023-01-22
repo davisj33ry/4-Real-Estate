@@ -1,42 +1,72 @@
 [
   {
-    "address": "25 Main St, New York, NY 10018",
+    "address": "25 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10018",
     "price": 750000
   },
   {
-    "address": "370 Spring St, Westport, PA 17778",
+    "address": "370 Spring St",
+    "city": "Westport",
+    "state": "PA",
+    "zipCode": "17778",
     "price": 125000
   },
   {
-    "address": "225 Llano, Pasadena, TX 77504",
+    "address": "225 Llano",
+    "city": "Pasadena",
+    "state": "TX",
+    "zipCode": "77504",
     "price": 102000
   },
   {
-    "address": "32 Aquarena Springs Dr, San Marcos, TX 78666",
+    "address": "32 Aquarena Springs Dr",
+    "city": "San Marcos",
+    "state": "TX",
+    "zipCode": "78666",
     "price": 75000
   },
   {
-    "address": "24 Spring St, Ithaca, NY 14850",
+    "address": "24 Spring St",
+    "city": "Ithaca",
+    "state": "NY",
+    "zipCode": "14850",
     "price": 160000
   },
   {
-    "address": "456 Hamilton Rd, Albany, NY 12204",
+    "address": "456 Hamilton Rd",
+    "city": "Albany",
+    "state": "NY",
+    "zipCode": "12204",
     "price": 265000
   },
   {
-    "address": "22 Soundview Ave, White Plains, NY 10601",
+    "address": "22 Soundview Ave",
+    "city": "White Plains",
+    "state": "NY",
+    "zipCode": "10601",
     "price": 750000
   },
   {
-    "address": "37 Ballston St, Bloomingdale, NJ 07403",
+    "address": "37 Ballston St",
+    "city": "Bloomingdale",
+    "state": "NJ",
+    "zipCode": "07403",
     "price": 350000
   },
   {
-    "address": "9 Rose St, Somerville, MA 02143",
+    "address": "9 Rose St",
+    "city": "Somerville",
+    "state": "MA",
+    "zipCode": "02143",
     "price": 340000
   },
   {
-    "address": "3300 Dolphin Cove, Austin, TX, 78704",
+    "address": "3300 Dolphin Cove",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78704",
     "price": 106000
   }
 
