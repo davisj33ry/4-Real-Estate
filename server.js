@@ -23,7 +23,7 @@ cloudinary.config({
 var hbs = exphbs.create();
 
 const sess = {
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SECRET_SESSION,
   cookie: {
     maxAge: 300000,
     httpOnly: true,
