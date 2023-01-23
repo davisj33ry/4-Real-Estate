@@ -11,6 +11,7 @@ router.post('/new',  async (req, res) => {
             state: req.body.state,
             zipCode: req.body.zipCode,
             price: req.body.price,
+            img_url: req.body.img_url
         });
         
       res.status(200).json(newListing);
