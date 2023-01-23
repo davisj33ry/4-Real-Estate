@@ -4,70 +4,80 @@
     "city": "New York",
     "state": "NY",
     "zipCode": "10018",
-    "price": 750000
+    "price": 750000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141661/1_xn2w8z.jpg"
   },
   {
     "address": "370 Spring St",
     "city": "Westport",
     "state": "PA",
     "zipCode": "17778",
-    "price": 125000
+    "price": 125000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141683/2_naf7yq.jpg"
   },
   {
     "address": "225 Llano",
     "city": "Pasadena",
     "state": "TX",
     "zipCode": "77504",
-    "price": 102000
+    "price": 102000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141693/3_ssjh3u.jpg"
   },
   {
     "address": "32 Aquarena Springs Dr",
     "city": "San Marcos",
     "state": "TX",
     "zipCode": "78666",
-    "price": 75000
+    "price": 75000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141700/4_ih9bql.jpg"
   },
   {
     "address": "24 Spring St",
     "city": "Ithaca",
     "state": "NY",
     "zipCode": "14850",
-    "price": 160000
+    "price": 160000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141710/5_yythlr.jpg"
   },
   {
     "address": "456 Hamilton Rd",
     "city": "Albany",
     "state": "NY",
     "zipCode": "12204",
-    "price": 265000
+    "price": 265000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141718/6_ymbsgc.jpg"
   },
   {
     "address": "22 Soundview Ave",
     "city": "White Plains",
     "state": "NY",
     "zipCode": "10601",
-    "price": 750000
+    "price": 750000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141732/7_dlph3v.jpg"
   },
   {
     "address": "37 Ballston St",
     "city": "Bloomingdale",
     "state": "NJ",
     "zipCode": "07403",
-    "price": 350000
+    "price": 350000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141738/8_lnh2o9.jpg"
   },
   {
     "address": "9 Rose St",
     "city": "Somerville",
     "state": "MA",
     "zipCode": "02143",
-    "price": 340000
+    "price": 340000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141744/9_mdjdkl.jpg"
   },
   {
     "address": "3300 Dolphin Cove",
     "city": "Austin",
     "state": "TX",
     "zipCode": "78704",
-    "price": 106000
+    "price": 106000,
+    "img_url": "https://res.cloudinary.com/dxrnczm82/image/upload/v1674141750/10_jslskv.jpg"
   }
 
 ]
